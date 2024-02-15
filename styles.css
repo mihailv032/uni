@@ -25,41 +25,26 @@ body {
     margin: 0;
 }
 
-/* CURVES*/
+/* GENERAL */
+
+section {
+    padding-bottom: 200px;/* for the waves*/
+}
 
 .curve {
     position: absolute;
-    height: 225px;
-    width: 100%;
-    bottom: 0;
+    bottom: -1px;
 }
 
-.curve::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
-    background-color: #3A2372;
-    transform: translate(80%,60%);
+.section_title {
+    font-size: 78px;
+    margin-bottom: 50px;
 }
 
-.curve::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
-    background-color: #111111;
-    transform: translate(-4%,50%);
-    z-index: 10000;
-
-}
 
 
 /* HEAD HEADER */
+
 header {
     height: 100vh;
   /* The image used */
@@ -75,13 +60,13 @@ header {
   background-size: cover;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
 
     position: relative;
 
-    background-color: var(--black);
 }
 
 /* NAV */
@@ -200,7 +185,66 @@ nav ul li a:hover::before {
     }
 }
 
-/* HOBBIES */
+/* skills */
+
+.skills {
+    position: relative;
+    background-color: #C91962;
+    min-height: 70vh;
+    display: flex;
+
+    color: white;
+    justify-content: start;
+    align-items: center;
+
+    flex-direction: column;
+}
 
 
+.skillsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
 
+/* PROJECTS */
+
+.projects {
+    height: 100vh;
+    background: #D92751;
+    position: relative;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.projectContainer img {
+    width: 30%;
+}
+
+/* footer */
+
+footer {
+    height: 150px;
+    background: var(--black);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}

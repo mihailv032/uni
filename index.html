@@ -6,16 +6,17 @@
     <title>me</title>
     <link href="./styles.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
-
-
+    
+    
     <script type="module" defer src="./src/github.js"></script>
     <script type="module" defer src="./source.js"></script>
   </head>
   <body>
+    
     <header>
       <nav id="arch">
 	<ul>
@@ -26,25 +27,127 @@
       </nav>
       Asalam walekum
       <h1 >i use arch btw</h1>
-      <div class="curve"></div>
+      </div>
+      <object class="curve" type="image/svg+xml" data="public/skills_wave.svg" class="logo">
+	Kiwis the best 4 real <!-- fallback image in CSS -->
+      </object>
     </header>
+    
     <main>
+      
+      <section class="skills">
+	<object class="curve" type="image/svg+xml" data="public/projects_wave.svg" class="logo">
+	  Kiwis the best 4 real <!-- fallback image in CSS -->
+	</object>
+
+	  <div>
+	    <h1 class="section_title">My skills</h1>
+	  </div>
+	  <div class="hidden skillsContainer">
+	    
+	    <div class="card mb-3" style="max-width: 540px;">
+	      <div class="row g-0">
+		<div class="col-md-4">
+		  <img src="..." class="img-fluid rounded-start" alt="...">
+		</div>
+		<div class="col-md-8">
+		  <div class="card-body">
+		    <h5 class="card-title">Card title</h5>
+		    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+		  </div>
+		</div>
+	      </div>
+	      
+	    </div>
+	    
+	    <div class="card mb-3" style="max-width: 540px;">
+	      <div class="row g-0">
+		<div class="col-md-4">
+		  <img src="..." class="img-fluid rounded-start" alt="...">
+		</div>
+		<div class="col-md-8">
+		  <div class="card-body">
+		    <h5 class="card-title">Card title</h5>
+		    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	    
+	    <div class="card mb-3" style="max-width: 540px;">
+	      <div class="row g-0">
+		<div class="col-md-4">
+		  <img src="..." class="img-fluid rounded-start" alt="...">
+		</div>
+		<div class="col-md-8">
+		  <div class="card-body">
+		    <h5 class="card-title">Card title</h5>
+		    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+      </section>
+
+      <section class="projects">
+	<div>
+	  <h1 class="section_title">my projects</h1>
+	</div>
+
+	<div class="card" style="width: 18rem;">
+	  <img alt="personal home page" src="./public/php.png" class="card-img-top" alt="...">
+	  <div class="card-body">
+	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	  </div>
+	</div>
+
+
+	<div class="projectContainer">
+	  
+	</div>
+
+	<div class="projectContainer">
+	  
+	</div>
+
+	<object class="curve" type="image/svg+xml" data="public/home_wave.svg" class="logo">
+	  Kiwis the best 4 real <!-- fallback image in CSS -->
+	</object>
+	
+	
+      </section>
+      
       <section class="githubSection">
+	<!-- github repos will be inserted here with js script see src/github.js -->
 	<div class="githubHead my-5" id="githubHead"><h1>Github projects</h1></div>
 	<div class="cardsContainer hidden" >
 	  <div class="cardWrapper" id="githubCards"></div>
 	</div>
       </section>
-      <section>
-	<div class="hobby hidden">
-	  <h1>My hobbies</h1>
-	  <p>Ive got nothing</p>
-	</div>
-      </section>
     </main>
     <footer>
-      
+      <h4>this is a footer</h4>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="importmap">
+     {
+       "imports": {
+	 "three": "https://unpkg.com/three@<version>/build/three.module.js",
+	 "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+
+       }
+     }
+	 const scene = new THREE.Scene();
+	 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	 
+	 const renderer = new THREE.WebGLRenderer();
+	 renderer.setSize( window.innerWidth, window.innerHeight );
+	 document.body.appendChild( renderer.domElement );
+    </script>
+    
   </body>
 </html>
