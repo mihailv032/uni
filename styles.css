@@ -1,0 +1,206 @@
+
+:root {
+    --almost_white: #f3f3f3;
+    --black: #111111;
+    --some_grey: #262626;
+    --li_box_bg: #FA4D54;
+}
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0 !important;
+}
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+body {
+    margin: 0;
+}
+
+/* CURVES*/
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #3A2372;
+    transform: translate(80%,60%);
+}
+
+.curve::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #111111;
+    transform: translate(-4%,50%);
+    z-index: 10000;
+
+}
+
+
+/* HEAD HEADER */
+header {
+    height: 100vh;
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    position: relative;
+
+    background-color: var(--black);
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0;
+    background: var(--some_grey);
+    color: var(--almost_white);
+    height: 50px;
+    font-size: 20px;
+    text-transform: capitalize;
+    z-index: 10000000000;
+
+}
+
+nav ul {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+nav ul li{
+    position: relative;
+    border-radius: 15px;
+
+}
+
+nav ul li a {
+    font-family: "Protest Riot", sans-serif;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+
+}
+
+nav ul li:hover{
+    color: ;
+    background-size: 0 0.1em, 100% 0.1em;
+}
+
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* ANIMATION */
+
+.hidden {
+    opacity: 0;
+    transition: all .5s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+/* GITHUB */
+
+.githubSection {
+    padding: 100px 0;
+    background-color: #3A2372;
+    color: white;
+}
+
+.githubHead {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.githubHead h1 {
+    font-size: 60px;
+    margin: 10px,0;
+    text-transform: uppercase;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.cardWrapper {
+    display: inline-grid;
+    grid-template-columns: repeat(3,auto); 
+
+    grid-gap: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .cardWrapper{
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+    }
+}
+
+/* HOBBIES */
+
+
+
