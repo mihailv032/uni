@@ -781,10 +781,10 @@ const repo = [
 createBody()
 async function createBody(){
   try{
-    const reposReq = await fetch(`https://api.github.com/users/${github_username}/repos`)
-    const repos = await reposReq.json()
+//    const reposReq = await fetch(`https://api.github.com/users/${github_username}/repos`)
+//    const repos = await reposReq.json()
 //    console.log(repos)
-    repos.forEach( repo => createGithubCard("githubCards",repo))
+    repo.forEach( repo => createGithubCard("githubCards",repo))
 
   }catch(err){
     console.log(err)
@@ -841,6 +841,8 @@ function createGithubCard(containerId,repoData){
   div2.append(btn)
 
   btn2.classList.add("btn", "btn-danger", "m-2")
+  btn2.style.textAlign ="center"
+  btn2.style.width = "80px"
   btn2.append(document.createTextNode("SSH"))
 
   btn2.addEventListener("click", e => {

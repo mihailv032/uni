@@ -47,26 +47,26 @@ section {
 
 header {
     height: 100vh;
-  /* The image used */
-  background-image: url("img_parallax.jpg");
-
-  /* Set a specific height */
-  min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+    width: 100vw;
+    /* The image used */
+    
+    /* Set a specific height */
+    min-height: 500px; 
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    position: absolute;
+    top:10px;
     color: white;
-
-    position: relative;
-
 }
 
 /* NAV */
@@ -163,6 +163,7 @@ nav ul li a:hover::before {
     font-size: 60px;
     margin: 10px,0;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .cardsContainer {
