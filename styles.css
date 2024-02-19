@@ -48,24 +48,10 @@ section {
 header {
     height: 100vh;
     width: 100vw;
-    /* The image used */
-    
-    /* Set a specific height */
     min-height: 500px; 
-    
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+
     position: absolute;
-    top:10px;
+    top: 0;
     color: white;
 }
 
@@ -149,8 +135,9 @@ nav ul li a:hover::before {
 
 .githubSection {
     padding: 100px 0;
-    background-color: #3A2372;
+    background-color: #6600FF;
     color: white;
+    position: relative;
 }
 
 .githubHead {
@@ -169,6 +156,7 @@ nav ul li a:hover::before {
 .cardsContainer {
     display: flex;
     justify-content: center;
+    margin-bottom: 10rem;
 }
 
 .cardWrapper {
@@ -176,14 +164,6 @@ nav ul li a:hover::before {
     grid-template-columns: repeat(3,auto); 
 
     grid-gap: 1.2rem;
-}
-
-@media (max-width: 1024px) {
-    .cardWrapper{
-	flex-wrap: wrap;
-	display: flex;
-	flex-direction: column;
-    }
 }
 
 /* skills */
@@ -239,6 +219,36 @@ nav ul li a:hover::before {
     width: 30%;
 }
 
+/* CONTANCT */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #3A2372;
+    color: white;
+}
+
+.contactWrapp {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+
+}
+
+.contactWrapp form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mailSvg {
+    flex:2; 
+    height: 300px;
+}
+
 /* footer */
 
 footer {
@@ -249,3 +259,27 @@ footer {
     justify-content: space-around;
     padding-top: 20px;
 }
+
+/* responsive */
+
+@media (max-width: 1024px) {
+    .cardWrapper{
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+    }
+
+    .contactWrapp{
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    }
+    .contactWrapp form{
+	width: 100%;
+    }
+    .mailSvg {
+	width: 200px;
+    }
+
+}
+

@@ -22,20 +22,20 @@
     </script>
 
     <script type="module" defer src="./src/github.js"></script>
-    <script type="module" defer src="./source.js"></script>
+    <script type="module" defer src="./src/animation.js"></script>
     <script type="module" defer src="./src/3d.js"></script>
   </head>
   <body>
-    
+    <nav id="arch">
+      <ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/portfolio">portfolio</a></li>
+	<li><a href="/contact">contact me (dont)</a></li>
+      </ul>
+    </nav>
+   
     <canvas id="header"></canvas>
     <header>
-      <nav id="arch">
-	<ul>
-	  <li><a href="/">Home</a></li>
-	  <li><a href="/portfolio">portfolio</a></li>
-	  <li><a href="/contact">contact me (dont)</a></li>
-	</ul>
-      </nav>
       Asalam walekum
       <h1 >i use arch btw</h1>
       </div>
@@ -51,7 +51,7 @@
 	  Kiwis the best 4 real <!-- fallback image in CSS -->
 	</object>
 
-	  <div>
+	  <div >
 	    <h1 class="section_title">My skills</h1>
 	  </div>
 	  <div class="hidden skillsContainer">
@@ -127,23 +127,7 @@
 	  <h1 class="section_title">my projects</h1>
 	</div>
 
-	<div class="card" style="width: 18rem;">
-	  <img alt="personal home page" src="./public/php.png" class="card-img-top" alt="...">
-	  <div class="card-body">
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	  </div>
-	</div>
-
-
-	<div class="projectContainer">
-	  
-	</div>
-
-	<div class="projectContainer">
-	  
-	</div>
-
-	<object class="curve" type="image/svg+xml" data="public/home_wave.svg" class="logo">
+	<object class="curve" type="image/svg+xml" data="public/contact_wave.svg" class="logo">
 	  Kiwis the best 4 real <!-- fallback image in CSS -->
 	</object>
 	
@@ -152,16 +136,45 @@
       
       <section class="githubSection">
 	<!-- github repos will be inserted here with js script see src/github.js -->
-	<div class="githubHead my-5" id="githubHead"><h1>Github projects</h1></div>
+	<div class="githubHead" id="githubHead"><h1>Github projects</h1></div>
 	<div class="cardsContainer hidden" >
 	  <div class="cardWrapper" id="githubCards"></div>
 	</div>
+	<object class="curve" type="image/svg+xml" data="./public/home_wave.svg" class="logo">
+	  Kiwis the best 4 real <!-- fallback image in CSS -->
+	</object>
+	
       </section>
+      <section class="contact">
+	<div>
+	  <h1 class="section_title">Contact Me</h1>
+	</div>
+	
+	<div class="contactWrapp">
+	  
+	  <object class="mailSvg" type="image/svg+xml" data="public/mail.svg" class="logo">
+	    Kiwis the best 4 real <!-- fallback image in CSS -->
+	  </object>
+	  
+	  <form id="contact">
+	    <div class="mb-3">
+	      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+	      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	    </div>
+	    <div class="mb-3">
+	      <label for="exampleFormControlTextarea1" class="form-label">what do u want ?????</label>
+	      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+	    </div>
+	    <button>submit</button>
+	  </form>
+	</div>
+      </section>
+      
     </main>
     <footer>
       <h4>this is a footer</h4>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   
+    
   </body>
 </html>

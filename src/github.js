@@ -40,7 +40,7 @@ const profile = {
 main()
 async function main(){
   try{
-    createHeader();//generetes the github section header with the user profile
+    createHeader(profile);//generetes the github section header with the user profile
 //    createBody() //gets and renders all the repos
   }catch(err){
     console.log(err)
@@ -52,16 +52,22 @@ async function createHeader(data){
   try{
     //const accountReq = await fetch(`https://api.github.com/users/${github_username}`)
     //const data = await accountReq.json()
-    console.log('here')
     const img = document.createElement("img");
-    img.src = profile.avatar_url;
+    const anchor = document.createElement("a")
+    const anchor2= document.createElement("a")
+    anchor.href=data.url
+    anchor2.href=data.url
+
+    img.src = data.avatar_url;
     img.style.width = "100px"
-    document.getElementById("githubHead").append(img)
+    anchor.append(img)
+    document.getElementById("githubHead").append(anchor)
 
     const h6 = document.createElement("h2")
+    anchor2.append(h6)
     h6.classList.add("my-3")
     h6.append(document.createTextNode(github_username))
-    document.getElementById("githubHead").append(h6)
+    document.getElementById("githubHead").append(anchor2)
 
   }catch(err){
     console.log(err)
@@ -830,6 +836,7 @@ function createGithubCard(containerId,repoData){
   div2.append(p)
 
   input.value = repoData.ssh_url
+  input.readOnly = true;
   input.style.width = "100%"
   div2.append(input)
 
