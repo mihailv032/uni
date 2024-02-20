@@ -819,7 +819,6 @@ function createGithubCard(containerId,repoData){
   div.append(div2)
 
   h5.classList.add("card-title", "fw-bolder")
-  console.log(repoData.name)
   titleAnchor.href = repoData.html_url
   titleAnchor.append(document.createTextNode(repoData.name))
   h5.append(titleAnchor)

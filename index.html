@@ -24,8 +24,10 @@
     <script type="module" defer src="./src/github.js"></script>
     <script type="module" defer src="./src/animation.js"></script>
     <script type="module" defer src="./src/3d.js"></script>
+    <script type="module" defer src="./src/form.js"></script>
   </head>
   <body>
+
     <nav id="arch">
       <ul>
 	<li><a href="/">Home</a></li>
@@ -34,21 +36,18 @@
       </ul>
     </nav>
    
-    <canvas id="header"></canvas>
     <header>
       Asalam walekum
       <h1 >i use arch btw</h1>
       </div>
-      <object class="curve" type="image/svg+xml" data="public/skills_wave.svg" class="logo">
-	Kiwis the best 4 real <!-- fallback image in CSS -->
-      </object>
+
     </header>
     
     <main>
       
       <section class="skills">
 	<object class="curve" type="image/svg+xml" data="public/projects_wave.svg" class="logo">
-	  Kiwis the best 4 real <!-- fallback image in CSS -->
+	  wave
 	</object>
 
 	  <div >
@@ -128,8 +127,9 @@
 	</div>
 
 	<object class="curve" type="image/svg+xml" data="public/contact_wave.svg" class="logo">
-	  Kiwis the best 4 real <!-- fallback image in CSS -->
+	  wave
 	</object>
+
 	<div id="carouselExampleCaptions" class="carousel slide">
 	  <div class="carousel-indicators">
 	    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -170,10 +170,6 @@
 	  </button>
 	</div>
 	
-	<object class="curve" type="image/svg+xml" data="public/home_wave.svg" class="logo">
->>>>>>> 344219b (finished projects section)
-	  Kiwis the best 4 real <!-- fallback image in CSS -->
-	</object>
 	
 	
       </section>
@@ -185,25 +181,36 @@
 	  <div class="cardWrapper" id="githubCards"></div>
 	</div>
 	<object class="curve" type="image/svg+xml" data="./public/home_wave.svg" class="logo">
-	  Kiwis the best 4 real <!-- fallback image in CSS -->
+	  wave
 	</object>
 	
       </section>
       <section class="contact">
-	<div>
+	<div class="githubHead">
 	  <h1 class="section_title">Contact Me</h1>
+	  <p>if you would like to make an inquiry about a possible project please selecte a date range and leave your contact details and a brief description of the project.</p>
 	</div>
 	
 	<div class="contactWrapp">
 	  
-	  <object class="mailSvg" type="image/svg+xml" data="public/mail.svg" class="logo">
-	    Kiwis the best 4 real <!-- fallback image in CSS -->
-	  </object>
-	  
+	  <div class="img_container">
+	    <img  alt="mail img" src="./public/mail.png"/>
+	  </div>
+
 	  <form id="contact">
 	    <div class="mb-3">
+	      <label for="name" class="form-label">Name</label>
+	      <input type="text" id="name" class="form-control" placeholder="Name" >
+	    </div>
+
+	    <div class="mb-3">
 	      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+	      <h5 class="mailError error">email must be the same</h5>
 	      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	      <label for="confirm_email" class="form-label">Confirm Email address</label>
+	      <h5 class="mailError error">email must be the same</h5>
+	      <input type="email" class="form-control" id="confirm_email" placeholder="name@example.com">
+
 	    </div>
 	    <div class="mb-3">
 	      <label for="exampleFormControlTextarea1" class="form-label">what do u want ?????</label>
