@@ -40,6 +40,10 @@ section {
     margin-bottom: 50px;
 }
 
+.hide {
+    display: none;
+}
+
 .visible {
     display: block !important;
 }
@@ -242,6 +246,7 @@ nav ul li a:hover::before {
 /* CONTANCT */
 
 .contact {
+    padding: 0 10px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
