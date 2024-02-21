@@ -11,7 +11,7 @@ function main(){
 function validateForm(e,mailInput){
   e.preventDefault()
   validateName()
-  checkMail(mailInput)
+  checkEmails(mailInput)
   validateDesc()
 }
 
@@ -19,7 +19,23 @@ function clearForm(){
   
 }
 
-function checkMail(mailInput){
+function checkDate(){
+  const dates = document.querySelectorAll("date")
+  const dateErr = document.getElementById("dateErr")
+  
+  for(let i=0;i<dates.length;i++){
+    if(dates[i].value.length == 0){};
+  }
+  dateErr.classList.remove("hide");
+  const removeError = () => {
+    descErr.classList.add("hide");
+    dates.forEach( date => date.removeEventListener("keypress",removeError));
+  }
+  
+  dates.forEach( date => date.addEventListener("keypress", removeError));
+}
+
+function checkEmails(mailInput){
 
 const mailError = document.querySelectorAll(".mailError")
   const confirmMail = document.getElementById("confirm_email")

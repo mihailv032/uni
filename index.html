@@ -43,9 +43,29 @@
     <header>
 
       <div id="header">
-      <p id="info">
-	asalam walekum
-      </p>
+	<div>
+	  <h1>Mihail Vacarciuc</h1>
+	  <h5>Email 230238428@aston.ac.uk</h5>
+	  <h5>SUN: 230238428</h5>
+	</div>
+	<div>
+	  <h1>Education</h1>
+	  <div>
+	    colton hills community school
+	  </div>
+	  <div>
+	    city of wolverhampton college
+	  </div>
+	  <div>
+	    aston university
+	  </div>
+	</div>
+	<div>
+	  <h1>Hobies</h1>
+	  <div>electrical engineering</div>
+	  <div>pool</div>
+	  <div>chess</div>
+	</div>
       </div>
       <div id="scene"></div>
     </header>
@@ -216,12 +236,20 @@
 	    </div>
 
 
-	    <div>
-	      <label for="start_date">start dtate</label>
-	      <input name="" id="start_date" type="date" value=""/>
-	      <label for="end_date">end dtate</label>
-	      <input name="" id="end_date" type="date" value=""/>
+	    <div class="contactDate">
+	      <h5 id="dateErr" class="hide error">you must provide valid start and end dates</h5>
+	      <div>
+		<div>
+		  <label for="start_date">start dtate</label>
+		  <input name="" id="start_date" class="form-control date" type="date" value=""/>
+		</div>
+		<div>
+		  <label for="end_date">end dtate</label>
+		  <input name="" id="end_date" class="form-control date" type="date" value=""/>
+		</div>
+	      </div>
 	    </div>
+	    
 	    <div class="mb-3">
 	      <label for="exampleFormControlInput1" class="form-label">Email address</label>
 	      <h5 class="mailError error">email must be the same</h5>
