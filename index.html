@@ -21,6 +21,10 @@
      }
     </script>
 
+<!--    <script src="./src/OrbitControls.js"></script> --> 
+    <!--     <script src="./src/threex.domevent.object3d.js"></script>-->
+    <!--     <script src="./src/threex.domevent.js"></script>-->
+
     <script type="module" defer src="./src/github.js"></script>
     <script type="module" defer src="./src/animation.js"></script>
     <script type="module" defer src="./src/3d.js"></script>
@@ -37,12 +41,13 @@
     </nav>
    
     <header>
-      <div id="scene"></div>
-      
+
+      <div id="header">
       <p id="info">
-	Built with <a href="http://threejs.org">Three.js</a> by <a href="https://github.com/jwhitfieldseed ">Joe Whitfield-Seed </a> 2013.
+	asalam walekum
       </p>
-      
+      </div>
+      <div id="scene"></div>
     </header>
     
     <main>
@@ -203,11 +208,19 @@
 	      <h5 id="nameError" class="hide error">Please enter a valid name</h5>
 	      <input type="text" id="name" class="form-control" placeholder="Name" >
 	    </div>
+
+	    <div class="mb-3">
+	      <label for="name" class="form-label">phone number</label>
+	      <h5 id="nameError" class="hide error">Please enter a valid name</h5>
+	      <input type="text" id="name" class="form-control" placeholder="Name" >
+	    </div>
+
+
 	    <div>
 	      <label for="start_date">start dtate</label>
-	      <input name="" id="start_date" type="text" value=""/>
+	      <input name="" id="start_date" type="date" value=""/>
 	      <label for="end_date">end dtate</label>
-	      <input name="" id="end_date" type="text" value=""/>
+	      <input name="" id="end_date" type="date" value=""/>
 	    </div>
 	    <div class="mb-3">
 	      <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -234,5 +247,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
+
   </body>
 </html>

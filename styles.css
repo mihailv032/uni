@@ -26,6 +26,12 @@ body {
 
 /* GENERAL */
 
+#scene {
+    max-width: 50%;
+    position: absolute;
+    right: 0;
+}
+
 section {
     padding-bottom: 200px;/* for the waves*/
 }
@@ -54,15 +60,21 @@ section {
 
 /* HEAD HEADER */
 #header {
-    max-width: 100vw;
-    height: 140vh;
-}
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50vw;
+ }
 
 header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    min-height: 500px; 
 
-    top: 0;
+    background: pink;
     color: white;
 }
 
