@@ -68,6 +68,11 @@
 	</div>
       </div>
       <div id="scene"></div>
+
+	<object class="curve" type="image/svg+xml" data="public/skills_wave.svg" class="logo">
+	  wave
+	</object>
+
     </header>
     
     <main>
@@ -229,14 +234,7 @@
 	      <input type="text" id="name" class="form-control" placeholder="Name" >
 	    </div>
 
-	    <div class="mb-3">
-	      <label for="name" class="form-label">phone number</label>
-	      <h5 id="nameError" class="hide error">Please enter a valid name</h5>
-	      <input type="text" id="name" class="form-control" placeholder="Name" >
-	    </div>
-
-
-	    <div class="contactDate">
+	    <div class="contactDate mb-3">
 	      <h5 id="dateErr" class="hide error">you must provide valid start and end dates</h5>
 	      <div>
 		<div>
@@ -249,22 +247,62 @@
 		</div>
 	      </div>
 	    </div>
-	    
+
+	    <div class="mb-3">
+	      <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+	      <h5 id="pnErr" class="error hide">you must enter a valid phone number</h5>
+	      <input type="text" class="form-control" id="pn" placeholder="+44 808 157 0192">
+      
+	    </div>
+
 	    <div class="mb-3">
 	      <label for="exampleFormControlInput1" class="form-label">Email address</label>
-	      <h5 class="mailError error">email must be the same</h5>
+	      <h5 class="mailError error hide">email must be the same</h5>
 	      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-	      <label for="confirm_email" class="form-label">Confirm Email address</label>
-	      <h5 class="mailError error">email must be the same</h5>
-	      <input type="email" class="form-control" id="confirm_email" placeholder="name@example.com">
+	    </div>
 
+	    <div class="mb-3">
+	      <label for="confirm_email" class="form-label">Confirm Email address</label>
+	      <h5 class="mailError error hide">email must be the same</h5>
+	      <input type="email" class="form-control" id="confirm_email" placeholder="name@example.com">
 	    </div>
 	    <div class="mb-3">
 	      <label for="exampleFormControlTextarea1" class="form-label">what do u want ?????</label>
 	      <h5 id="descErr" class="hide error">Please enter a valid description</h5>
 	      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 	    </div>
+
+	    <select class="form-select mb-3" aria-label="Default select example">
+	      <option value="phone number">phone number</option>
+	      <option value="email" selected="selected">email</option>
+	    </select>
+
 	    <button type="submit" id="contactSubmit" class="btn btn-danger">Submit</button>
+
+	    <!-- MODAL -->
+	    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h1 class="modal-title fs-5" id="exampleModalLabel">Email Successfully sent</h1>
+		    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+		    <h4 class="modalTitles">Name:</h4>
+		    <h4 class="modalTitles">Email:</h4>
+		    <h4 class="modalTitles">phone number:</h4>
+		    <h4 class="modalTitles">duration:</h4>
+		    <h4 class="modalTitles">description:</h4>
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+
+
+	    </div>
 	  </form>
 	</div>
       </section>

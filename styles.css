@@ -22,6 +22,7 @@ a {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* GENERAL */
@@ -271,8 +272,11 @@ nav ul li a:hover::before {
 
 /* CONTANCT */
 
+#modal {
+    color: black;
+}
 .contact {
-    padding: 0 10px !important;
+    padding: 100px 10px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -300,11 +304,6 @@ nav ul li a:hover::before {
     justify-content: center;
     height: 100%;
     width: 100%;
-}
-
-.mailError {
-    display: none;
-    
 }
 
 
@@ -338,10 +337,18 @@ footer {
 	width: 100%;
 	max-width: 100%;
     }
+    .img_container{
+	display: none;
+    }
     header {
 	flex-direction: column-reverse;
 	align-items: center;
+	padding-top: 100px;
+	
     }
-
+    header div{
+	width: 100% !important;
+	max-width: 100% !important;
+    }
 }
 

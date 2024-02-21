@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import {FlakesTexture} from 'three/addons/textures/FlakesTexture.js';
 
-const width = window.innerWidth/2
+const width = window.innerWidth > 930 ? window.innerWidth/2 : window.innerWidth;
 const height =window.innerHeight
 const scene = new THREE.Scene(),
       camera = new THREE.PerspectiveCamera(45,  width / height, 0.1, 1000),
@@ -37,7 +37,7 @@ const cubeMaterial = {
   clearRoughness: 0.1,
   metalness: 0.9,
   roughness: 0.5,
-  color: 0xC91962,
+  color: 0x111111,
   normalMap: texture,
   normalScale: new THREE.Vector2(0.15,0.15)
 }
@@ -55,8 +55,8 @@ const pointlight = new THREE.PointLight(0xffffff,10000);
 pointlight.position.set(-15,-15,30)
 scene.add(pointlight,ambientLight);
 
-const helper = new THREE.PointLightHelper(pointlight)
-scene.add(helper)
+//const helper = new THREE.PointLightHelper(pointlight)
+//scene.add(helper)
 
 
 
@@ -72,7 +72,8 @@ render()
 window.addEventListener( 'resize', onWindowResize, false );
 
 function onWindowResize(){
-  camera.aspect = (window.innerWidth/2) / window.innerHeight;
+  const width = window.innerWidth > 930 ? window.innerWidth/2 : window.innerWidth;
+  camera.aspect = width / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize( window.innerWidth/2, window.innerHeight );
+  renderer.setSize(width, window.innerHeight );
 }
