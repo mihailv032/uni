@@ -251,6 +251,21 @@ nav ul li a:hover::before {
 
 /* PROJECTS */
 
+@media (max-width: 765px) {
+    .project div {
+	display: block !important;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+
+    }
+    .project div h5{
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+    }
+    
+}
 .projects {
     height: 100%;
     background: #D92751;
@@ -390,6 +405,7 @@ footer input:focus {
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	padding: 10px;
     }
     #header div{
 	display:flex;

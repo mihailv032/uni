@@ -3,7 +3,9 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import {FlakesTexture} from 'three/addons/textures/FlakesTexture.js';
 
-const width = window.innerWidth > 930 ? window.innerWidth/2 : window.innerWidth;
+const takeFullWidthThreshold = 1024
+
+const width = window.innerWidth > takeFullWidthThreshold ? window.innerWidth/2 : window.innerWidth;
 const height =window.innerHeight
 const scene = new THREE.Scene(),
       camera = new THREE.PerspectiveCamera(45,  width / height, 0.1, 1000),
@@ -72,7 +74,7 @@ render()
 window.addEventListener( 'resize', onWindowResize, false );
 
 function onWindowResize(){
-  const width = window.innerWidth > 930 ? window.innerWidth/2 : window.innerWidth;
+  const width = window.innerWidth > takeFullWidthThreshold ? window.innerWidth/2 : window.innerWidth;
   camera.aspect = width / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(width, window.innerHeight );

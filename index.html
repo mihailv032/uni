@@ -1,4 +1,12 @@
 <!doctype html>
+
+
+
+<!-- FOR THE WEBSITE TO WORK PROPERLY PLEASE HOST IT TY -->
+
+
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -44,17 +52,17 @@
       </ul>
     </nav>
    
-    <header>
+    <header id="main-header">
 
       <div id="header">
-	<div>
-	  <h1>Mihail Vacarciuc</h1>
+	<div class="mb-3">
+	  <h1><em>Mihail Vacarciuc</em> </h1>
 	  <h5>Email 230238428@aston.ac.uk</h5>
 	  <h5>SUN: 230238428</h5>
 	</div>
 
-	<div >
-	  <h1>Education</h1>
+	<div class="mb-3" id="education">
+	  <h1><em>Education</em> </h1>
 	  <div>
 	    colton hills community school - GCSE
 	  </div>
@@ -65,8 +73,12 @@
 	    aston university - computer sceience Bcs
 	  </div>
 	</div>
-	<div>
-	  <h1>Hobies</h1>
+	<div class="mb-3" id="workexperience">
+	  <h1><em>Work Experience</em></h1>
+	  <div>AS-SAFWAH FOODS LTD - IT TECHNICIAN</div>
+	</div>
+	<div class="mb-3" id="interests">
+	  <h1><em>Hobies</em></h1>
 	  <div>electrical engineering</div>
 	  <div>pool</div>
 	  <div>chess</div>
@@ -100,7 +112,7 @@
 		<div class="col-md-8">
 		  <div class="card-body">
 		    <h5 class="card-title">Java Script</h5>
-		    <p class="card-text">everything that can be written in javascript will eventually be written in javascript <br>©Jeff Atwood</p>
+		    <p class="card-text"><blockquote cite="https://en.wikipedia.org/wiki/Jeff_Atwood#:~:text=In%202007%2C%20Jeff%20Atwood%20made,eventually%20be%20written%20in%20JavaScript.%E2%80%9D">everything that can be written in javascript will eventually be written in javascript</p></blockquote>
 		    <p class="card-text"><small class="text-body-secondary">Raiting:</small>
 		      <img width="25" src="./public/star.png" alt="star icon"/>
 		      <img width="25" src="./public/star.png" alt="star icon"/>
@@ -116,7 +128,7 @@
 	    <div class="card mb-3" style="max-width: 540px;">
 	      <div class="row g-0">
 		<div class="col-md-4">
-		  <img src="./public/java.png" class="img-fluid rounded-start" alt="asdf">
+		  <img src="./public/java.jpg" class="img-fluid rounded-start" alt="asdf">
 		</div>
 		<div class="col-md-8">
 		  <div class="card-body">
@@ -174,14 +186,14 @@
 	    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
 	  </div>
 	  <div class="carousel-inner">
-	    <div class="carousel-item active">
+	    <div class="carousel-item active project">
 	      <img src="./public/php.png" class="d-block w-100" alt="...">
 	      <div class="carousel-caption d-none d-md-block">
 		<h5>PHP (personal home page)</h5>
 		<p>This is a custom home page where you have a todo list, weather forecast and github component where you can see the latest information about your repositories</p>
 	      </div>
 	    </div>
-	    <div class="carousel-item">
+	    <div class="carousel-item project">
 	      <img src="./public/meatalicious.pn
 			g" class="d-block w-100" alt="...">
 	      <div class="carousel-caption d-none d-md-block">
@@ -189,7 +201,7 @@
 		<p>Ecommerce website to sell meat.The website is still on the prototype stage</p>
 	      </div>
 	    </div>
-	    <div class="carousel-item">
+	    <div class="carousel-item project">
 	      <img src="./public/platformer.png" class="d-block w-100" alt="...">
 	      <div class="carousel-caption d-none d-md-block">
 		<h5 >Platformer Game</h5>
@@ -220,7 +232,7 @@
 	</object>
 	
       </section>
-      <section class="contact">
+      <section class="contact" id="contact-me">
 	<div class="githubHead">
 	  <h1 class="section_title">Contact Me</h1>
 	  <p>if you would like to make an inquiry about a possible project please selecte a date range and leave your contact details and a brief description of the project.</p>
@@ -285,7 +297,7 @@
 	      </select>
 	    </div>
 
-	    <button type="submit" id="contactSubmit" class="btn btn-danger">Submit</button>
+	    <button type="submit" id="contactSubmit" class="btn btn-danger submit">Submit</button>
 
 	    <!-- MODAL -->
 	    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -317,9 +329,9 @@
       
     </main>
     <footer>
-      <a href="https://github.com/mihailv032/"><img alt="github" src="./public/github.png"/></a></h4>
+      <a href="mailto:https://github.com/mihailv032/"><img alt="github" src="./public/github.png"/></a></h4>
       <h4>all Copyrights are reserved by me</h4>
-      <input type="email" value="EMAIL: 230238428@aston.ac.uk" readOnly/>
+      <a href="mailto:230238428@aston.ac.uk">Email Me:230238428@aston.ac.uk</a>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
